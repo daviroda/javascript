@@ -21,16 +21,20 @@
     <main>
         <p>Aqui vai o resultado</p>
         <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-        <div id="msg">Clique em mim</div>
+        <div class="msg">Clique em mim</div>
     </main>
 
     <script>
         var corpo = window.document.body
         var p1 = window.document.getElementsByTagName('p')[1]
-        var d = window.document.getElementById('msg')
+       /* 
+       var d = window.document.getElementById('msg')
         d.style.color = 'black'
         //d.innerText = 'Estou aguardando..'
         window.document.getElementById('msg').innerText = 'Olá'
+        d.style.background = 'green'
+        */
+        var d = window.document.querySelector('div#msg')
     </script>
 </body>
 </html>
