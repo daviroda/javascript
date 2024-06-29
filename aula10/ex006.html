@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+    div#area {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: gray;
+        height: 400px;
+        width: 400px;
+
+        transform: translate(-50%, -50%);
+      }
+
+      div#area > p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+
+        transform: translate(-50%, -50%);
+      }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        <p>Interaja...</p>
+    </div>
+    <script>
+        // var a = window.document.getElementById('area') ass em qualquer function que colocar a. irá referir a div#area e ass não precisará criar outras variaveis, porém não é a melhor coisa a se fazer, por isso não fiz.
+        
+        function clicar() {
+           var a = window.document.getElementById('area')
+           a.innerHTML = '<p> Clicou! </p>'
+        }
+
+        function entrar() {
+            var e = window.document.getElementById('area')
+            e.innerHTML = '<p> Entrou! </p>'
+        }
+
+        function sair() {
+            var s = window.document.getElementById('area')
+            s.innerHTML = '<p> Saiu! </p>'
+        }
+
+    </script>
+</body>
+</html>
