@@ -29,25 +29,29 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area">
         <p>Interaja...</p>
     </div>
     <script>
-        // var a = window.document.getElementById('area') ass em qualquer function que colocar a. irá referir a div#area e ass não precisará criar outras variaveis, porém não é a melhor coisa a se fazer, por isso não fiz.
-        
+        // var a = window.document.getElementById('area') ass em qualquer function que colocar a. irá referir a div#area e ass não precisará criar outras variaveis, porém não é a melhor coisa a se fazer.
+
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout',sair)
+
         function clicar() {
-           var a = window.document.getElementById('area')
            a.innerHTML = '<p> Clicou! </p>'
+           a.style.background = 'green'
         }
 
         function entrar() {
-            var e = window.document.getElementById('area')
-            e.innerHTML = '<p> Entrou! </p>'
+            a.innerHTML = '<p> Entrou! </p>'
         }
 
         function sair() {
-            var s = window.document.getElementById('area')
-            s.innerHTML = '<p> Saiu! </p>'
+            a.innerHTML = '<p> Saiu! </p>'
+            a.style.background = 'gray'
         }
 
     </script>
