@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            width: 100px;
+            background-color: rgb(136, 135, 135);
+            display: inline-block;
+            height: 50px;
+            border: solid 2px rgb(83, 75, 75);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das Mesagens</h1>
+    <div class="bt1"><p>Botão 1</p></div>
+    <div class="bt2"><p>Botão 2</p></div>
+    <div class="bt3"><p>Botão 3</p></div>
+
+    <script>
+        var bt1 = window.document.getElementsByClassName('bt1')[0]
+        var bt2 = window.document.getElementsByClassName('bt2')[0]
+        var bt3 = window.document.getElementsByClassName('bt3')[0]
+
+        bt1.addEventListener('click', clicar1)
+        bt2.addEventListener('click', clicar2)
+        bt3.addEventListener('click', clicar3)
+
+        function clicar1() {
+            bt1 = window.alert('Você clicou no botão 1')
+        }
+
+        function clicar2() {
+            bt2 = window.alert('Você clicou no botão 2')
+        }
+
+        function clicar3() {
+            bt3 = window.alert('Você clicou no botão 3')
+        }
+
+    </script>
+</body>
+</html>
