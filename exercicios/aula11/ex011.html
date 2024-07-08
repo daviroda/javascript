@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localidade</title>
+</head>
+<body>
+    <h1>Sistema de localidade</h1>
+    <p>País onde vive: <input type="text" name="pais" id="txtpais"></p>
+    <input type="button" value="Analisar" onclick="analisar()">
+    <div id="res">
+    
+    </div>
+    <script> 
+        function analisar() {
+            var país = window.document.getElementById('txtpais')
+            var res =  window.document.getElementById('res')
+             if (país.value == 'Brasil') { 
+            res.innerHTML = `<p>Você mora no País <strong>${país.value}</strong>, Você é Brasilero!</p>`
+            } else {
+            res.innerHTML = `<p>Você mora no País <strong>${país.value}</strong>, Você é Estrangeiro!</p>`
+             }
+         } 
+    </script>
+</body>
+</html>
