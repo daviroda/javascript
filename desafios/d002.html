@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio boas-vindas</title>
+    <style>
+            body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#iniciar {
+            width: 200px;
+            background-color: rgb(185, 182, 182);
+            display: inline-block;
+            height: 50px;
+            border: solid 2px rgb(83, 75, 75);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas-vindas</h1>
+    <div id="iniciar">
+        <p>Inicie o desafio</p>
+    </div>
+    <script>    
+        var inicie = window.document.getElementById('iniciar')
+        inicie.addEventListener('click', clicar)
+
+        function clicar(){   
+            var nome = window.prompt('Qual é o seu nome?')
+            var idade = window.prompt(`Olá ${nome}! Quantos anos você tem?`)
+            var dados = window.alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade!`)
+        }
+    </script>
+</body>
+</html>
