@@ -32,3 +32,11 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+#imagem {
+    height: 350px;
+    width: 350px;
+    border-radius: 200px;
+    margin: auto;
+    display: block;
+}
