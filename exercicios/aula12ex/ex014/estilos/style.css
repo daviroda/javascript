@@ -40,3 +40,8 @@ footer {
     margin: auto;
     display: block;
 }
+
+#msg {
+    text-align: center;
+    margin-bottom: 10px;
+}
