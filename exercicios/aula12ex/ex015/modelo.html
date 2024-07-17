@@ -13,10 +13,26 @@
     <main>
         <section>
             <div>
-                
+                <form action="verificador.php" method="get">
+                    <div><label for="txtano">Ano de Nascimento </label>
+                    <input type="number" name="ano" id="txtano">
+                </div>
+                <div>
+                    <p>Sexo:
+                    <input type="radio" name="radsex" id="Mas" checked>
+                    <label for="mas">Masculino</label>
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino</label>
+                    </p>
+                </div>
+                <div>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                    
+                </div>
+                </form>
             </div>
             <div id="res">
-                
+               <p>Preencha os dados acima para ver o resultado!</p> 
             </div>
         </section>
     </main>
