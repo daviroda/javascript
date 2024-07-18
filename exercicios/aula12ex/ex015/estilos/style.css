@@ -36,3 +36,11 @@ footer {
 input {
     margin-bottom: 20px;
 }
+
+img#foto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
