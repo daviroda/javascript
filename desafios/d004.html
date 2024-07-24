@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula troco</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            background-color: rgb(192, 188, 188);
+            padding: 10px;
+            border-radius: 5px;
+            border: solid 1px gray;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: auto;
+        }
+        p.preço {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Razer_Naga_2014_MMO_Gaming_Mouse_%2814714867599%29.jpg" alt="Mouse Gamer">
+    <p class="preço">R$300,00</p>
+    <div onclick="clicar()">
+        <p>Comprar produto</p>
+    </div>
+
+    <script>
+        function clicar() {
+            var nomepro = window.prompt('Nome do produto que você está comprando')
+            var custopro = window.prompt(`Quanto custa ${nomepro} que você está comprando?`)
+            var valordado = window.prompt(`Qual foi o valor que você deu para pagar o ${nomepro}?`)
+            window.alert(`Parabéns!!! Você adquiriu um ${nomepro} que custou ${custopro}.
+Deu ${valordado} em dinheiro e vai receber ${valordado-custopro} de troco. Volte Sempre!`)
+
+
+        }
+    </script>
+</body>
+</html>
