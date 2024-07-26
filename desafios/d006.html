@@ -36,9 +36,9 @@ div.converter{
     function clicar() {
         var conv = window.prompt('Digite uma temperatura em ºC (Celsius)')
         var res = window.document.getElementById('res')
-        var K = conv + 273
-        var F = conv * 9 / 5 + 32 //arrumar formulas
-        res.innerHTML = `<h2>A temperatura de ${conv}, corresponde a...</h2> <p>${K} ºK (Kelvin)</p> <p>${F} ºF (Fahrenheit)`
+        var K = Number(conv) + 273.15; //formula para converter Celsius em Kelvin
+        var F = conv * 9 / 5 + 32 //formula para converter Celsius em Fahrenheit
+        res.innerHTML = `<h2>A temperatura de ${conv}ºC, corresponde a...</h2> <p>${K} ºK (Kelvin)</p> <p>${F} ºF (Fahrenheit)`
     }
    </script>
 </body>
