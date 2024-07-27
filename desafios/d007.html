@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ para US$</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div#converter {
+            background-color: rgb(190, 185, 185);
+            border: 1px solid gray;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ para US$</h1>
+    <div id="converter" onclick="clicar()"55555>
+        <p>Converter</p>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+
+    <script>
+        var cotação = window.prompt('Qual é a cotação do dolar atual?') //pede a cotação do dolar
+        
+        function clicar() {
+            var res = window.document.getElementById('res')
+            var carteira = window.prompt('Quantos Reais deseja converter?') //quantos reais o usuario quer converter
+            var conv =  carteira / cotação //calculo
+            conv.toFixed(2)
+            res.innerHTML = `<h2>A cotação do Dolar é de ${cotação}R$</h2> <p>convertendo ${carteira}R$ para dolar temos <string>${conv}US$ convertidos <string>` //resultado
+        }
+    </script>
+</body>
+</html>
