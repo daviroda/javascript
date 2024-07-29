@@ -39,8 +39,7 @@
             var res = window.document.getElementById('res')
             var carteira = window.prompt('Quantos Reais deseja converter?') //quantos reais o usuario quer converter
             var conv =  carteira / cotação //calculo
-            conv.toFixed(2)
-            res.innerHTML = `<h2>A cotação do Dolar é de ${cotação}R$</h2> <p>convertendo ${carteira}R$ para dolar temos <string>${conv}US$ convertidos <string>` //resultado
+            res.innerHTML = `<h2>A cotação do Dolar é de ${cotação}R$</h2> <p>convertendo ${carteira}R$ para dolar temos <string>${conv.toFixed(2)}US$ convertidos <string>` //resultado
         }
     </script>
 </body>
