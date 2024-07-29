@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de exercício</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
-        <h1>Titulo</h1>
+        <h1>Vamos contar?</h1>
     </header>
     <main>
         <section>
             <div>
-                Testando...
+               <form action="extras/contação.py">
+                <div class="start">
+                    <label for="istart">Inicio: </label>
+                    <input type="number" name="start" id="istart">
+                </div>
+                <div class="end">
+                    <label for="iend">Fim: </label>
+                    <input type="number" name="end" id="iend">
+                </div>
+                <div class="pass">
+                    <label for="ipass">Passo: </label>
+                    <input type="number" name="pass" id="ipass">
+                </div>
+               </form>
             </div>
-            <div>
-                Olá!
+            <div id="res">
+                <p>Preparando a contagem...</p>
             </div>
         </section>
     </main>
