@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div.calc {
+            text-align: center;
+            width: 100px;
+            height: 60px;
+            background-color: rgb(197, 195, 195);
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <div class="calc">
+        <p>Desconto de 10%</p>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        let calc = window.document.getElementsByClassName('calc')[0]
+        let res = window.document.getElementById('res')
+        calc.addEventListener('click', clicar) // add evento
+        function clicar() {
+            let namepro = window.prompt('Qual o produto que você está comprando?')
+            let valorpro = window.prompt(`Qual é o preço do ${namepro}?`)
+            let calculo = valorpro * 0.10 //calculo para porcentagem de desconto
+
+            res.innerHTML = `<h2>Calculando desconto de 10% para ${namepro}</h2><p>O preço original era ${valorpro}</p>
+<p>Você acaba de ganhar R$${calculo} de desconto (-10%)`
+ //Arrumar res, colocar um let para valor final e add foto do produto
+        }
+    </script>
+</body>
+</html>
