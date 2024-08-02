@@ -39,7 +39,7 @@
             let namepro = window.prompt('Qual o produto que você está comprando?')
             let valorpro = window.prompt(`Qual é o preço do ${namepro}?`)
             let calculo = valorpro * 0.10 //calculo para porcentagem de desconto
-            let valorfinal = valorpro - calculo //valor final do produt
+            let valorfinal = valorpro - calculo //valor final do produto
 
             res.innerHTML = `<h2>Calculando desconto de 10% para ${namepro}</h2><p>O preço original era R$${valorpro}</p>
 <p>Você acaba de ganhar R$${calculo.toFixed(2)} de desconto (-10%)</p>
