@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de exercício</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
-        <h1>Titulo</h1>
+        <h1>Tabuada</h1>
     </header>
     <main>
         <section>
-            <div>
-                Testando...
-            </div>
-            <div>
-                Olá!
-            </div>
+            <form action="extras/tabuada.py">
+                <div>
+                    <label for="inum">Número:</label>
+                    <input type="number" name="number" id="inum">
+                    <button type="button" onclick="tabuada()" >Gerar Tabuada</button>
+                </div>
+                <div>
+                    <select name="tabu" id="seltab"></select>
+                </div>
+            </form>
         </section>
     </main>
     <footer>
