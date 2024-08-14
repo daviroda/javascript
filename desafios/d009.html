@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Salárial</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div.reajuste {
+            padding: 10px;
+            border: 1px solid gray;
+            width: 100px;
+            background-color: rgb(177, 175, 175);
+        }
+
+        .reajuste > p {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Reajuste</h1>
+    <div class="reajuste" onclick="clicar()">
+        <p>Reajustar Salario</p>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+
+    <script>
+       function clicar() {
+        let nomefuncionario = window.prompt('Qual o nome do funcionario?')
+        let salarioatual = window.prompt(`Qual salário atual do ${nomefuncionario}?`)
+        let reajus = window.prompt(`O salário do ${nomefuncionario} vai ser reajustado em qual porcentagem?`)
+        let calculoporce = salarioatual * reajus / 100
+        let calculoaumento = salarioatual + calculoporce
+        res.innerHTML = `<h2>${nomefuncionario} recebeu um aumento salarial!</h2>`  //arrumar calculos e fazer o resultado
+       }
+    </script>
+</body>
+</html>
