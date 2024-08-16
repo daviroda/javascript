@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-    <h1>Reajuste</h1>
+    <h1>Reajuste / Aumento</h1>
     <div class="reajuste" onclick="clicar()">
         <p>Reajustar Salario</p>
     </div>
@@ -41,8 +41,11 @@
         let salarioatual = window.prompt(`Qual salário atual do ${nomefuncionario}?`)
         let reajus = window.prompt(`O salário do ${nomefuncionario} vai ser reajustado em qual porcentagem?`)
         let calculoporce = salarioatual * reajus / 100
-        let calculoaumento = salarioatual + calculoporce
-        res.innerHTML = `<h2>${nomefuncionario} recebeu um aumento salarial!</h2>`  //arrumar calculos e fazer o resultado
+        let calculoaumento = Number(salarioatual) + Number(calculoporce)
+        res.innerHTML = `<h2>${nomefuncionario} recebeu um aumento salarial!</h2>
+<p>O salário atual era de R$${salarioatual}.</p>
+<p>Com o aumento de ${reajus}%, o salário vai aumentar R$${calculoporce} no próximo mês</p>
+<p>E a partir dai, ${nomefuncionario} vai passar a ganhar R$${calculoaumento.toFixed(2)}`  //arrumar calculos e fazer o resultado
        }
     </script>
 </body>
