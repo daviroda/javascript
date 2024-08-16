@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div.cal {
+            width: 100px;
+            background-color: rgb(187, 184, 184);
+            height: 50px;    
+            border-radius: 5px;    
+            border: 1px solid rgb(150, 148, 148);
+        }
+
+        div.cal > p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <div class="cal">
+        <p>Calcular</p>
+    </div>
+    <div id="res">
+        <p>Considerando uma equação no formato <strong>ax² + bx + c </strong> = 0, aperte o botão acima para calcular o valor de Δ</p>
+    </div>
+
+    <script>
+        let divcal = document.getElementsByClassName("cal")[0]
+        let addevent = divcal.addEventListener("click", clicar)
+        let res = document.getElementById("res")
+        function clicar() {
+            let valora = window.prompt("Qual o valor de a?")
+            let valorb = window.prompt("Qual o valor de b?")
+            let valorc = window.prompt("Qual o valor de c?")
+            let calcpass1 =  valorb**2 
+            let calcpassf = calcpass1 - 4 * valora * valorc
+            let valordelta = calcpassf
+
+            res.innerHTML = `<h2>Resolvendo Bhaskara</h2>
+<p>A equação atual é <strong>${valora}x² + ${valorb}x + ${valorc} = 0</strong></p>
+<p>O cálculo realizado será <strong> Δ = ${valorb}² - 4 . ${valora} . ${valorc}</strong></p>
+<p>O valor calculado foi <strong> Δ = ${valordelta} </strong></p>`
+        }
+    </script>
+</body>
+</html>
