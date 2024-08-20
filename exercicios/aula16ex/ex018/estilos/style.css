@@ -33,9 +33,18 @@ select#flista {
     margin-bottom: 10px;
 }
 
+input[type=button] {
+    margin-bottom: 10px;
+}
 
 footer {
     color: white;
     text-align: center;
     font-style: italic;
+}
+
+div#res > p {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: large;
 }
