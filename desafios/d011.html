@@ -38,14 +38,16 @@
         function verificar() {
             let anobissexto = window.prompt("Qual é o ano que você quer verificar?")
             let res = document.getElementById("res")
-            if (anobissexto / 4 == true && anobissexto / 400 == true) {
+            if ((anobissexto % 4 == 0 && anobissexto % 100 != 0) || (anobissexto % 400 == 0)) //teste na condição
+            //( % 4 == 0 ) é lida como a divisão por 4 tem que ter o resultado do resto 0 - ATENÇÃO
+             {
                 res.innerHTML = `<h2> Analisando o ano de ${anobissexto}...
 <P>O ano de ${anobissexto} é Bissexto</p>`
             } else {
                 res.innerHTML =  `<h2> Analisando o ano de ${anobissexto}...
 <P>O ano de ${anobissexto} não é Bissexto</p>`
             }
-        } //arrumar calculo
+        }
     </script>
 </body>
 </html>
