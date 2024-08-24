@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço mudou</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.ver {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(212, 208, 208);
+            border: 1px solid rgb(121, 119, 119);
+        }
+
+        div.ver > P {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+    <div class="ver" onclick="verificar()">
+        <p>verificar</p>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para analisar a mudança de preço.</p>
+    </div>
+    <script>
+        function verificar() {
+            let precoanterior = window.prompt("Qual era o preço anterior do produto?")
+            let precoatual = window.prompt("Qual o preço atual do produto?")
+            let res = document.getElementById("res")
+            if (precoanterior < precoatual) {
+                let precosubiu = precoatual - precoanterior //diferença entre os valores
+                let variacaosubiu = precosubiu / precoanterior * 100   //calculo variação
+                res.innerHTML = `<h2>Analisando os valores informados</h2>
+<p>O produto custava R$ ${precoanterior} e agora custa R$ ${precoatual}</p>
+<p>Hoje o produto está mais caro</p>
+<p>O preço subiu R$ ${precosubiu} em relação ao preço anterior</p>
+<p>Uma variação de ${variacaosubiu.toFixed(2)} % para cima`
+            } else if (precoanterior > precoatual) {
+                let precocaiu = precoanterior - precoatual
+                let variacaocaiu = precocaiu / precoatual * 100
+                res.innerHTML = `<h2>Analisando os valores informados</h2>
+<p>O produto custava R$ ${precoanterior} e agora custa R$ ${precoatual}</p>
+<p>Hoje o produto está mais barato</p>
+<p>O preço caiu R$ ${precocaiu} em relção ao preço anterior</p>
+<p>Uma variação de ${variacaocaiu.toFixed(2)} % para baixo.`
+            } //arrumar bug
+        }
+    </script>
+</body>
+</html>
