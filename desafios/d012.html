@@ -34,7 +34,7 @@
             let precoanterior = window.prompt("Qual era o preço anterior do produto?")
             let precoatual = window.prompt("Qual o preço atual do produto?")
             let res = document.getElementById("res")
-            if (precoanterior < precoatual) {
+            if (precoanterior > precoatual && precoatual < precoanterior) {
                 let precosubiu = precoatual - precoanterior //diferença entre os valores
                 let variacaosubiu = precosubiu / precoanterior * 100   //calculo variação
                 res.innerHTML = `<h2>Analisando os valores informados</h2>
@@ -42,15 +42,15 @@
 <p>Hoje o produto está mais caro</p>
 <p>O preço subiu R$ ${precosubiu} em relação ao preço anterior</p>
 <p>Uma variação de ${variacaosubiu.toFixed(2)} % para cima`
-            } else if (precoanterior > precoatual) {
-                let precocaiu = precoanterior - precoatual
+            } else {
+                let precocaiu = precoatual - precoanterior
                 let variacaocaiu = precocaiu / precoatual * 100
                 res.innerHTML = `<h2>Analisando os valores informados</h2>
 <p>O produto custava R$ ${precoanterior} e agora custa R$ ${precoatual}</p>
 <p>Hoje o produto está mais barato</p>
-<p>O preço caiu R$ ${precocaiu} em relção ao preço anterior</p>
+<p>O preço caiu R$ ${precocaiu} em relação ao preço anterior</p>
 <p>Uma variação de ${variacaocaiu.toFixed(2)} % para baixo.`
-            } //arrumar bug
+            } 
         }
     </script>
 </body>
