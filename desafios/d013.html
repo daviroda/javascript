@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.not {
+            width: 120px;
+            height: 80px;
+            padding-top: 10px;
+            border-radius: 10px;
+            background-color: rgb(173, 169, 169);
+            border: 1px solid gray;
+        }
+
+        div.not > p {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Situação do aluno</h1>
+    <div class="not" onclick="verificar()">
+        <p>Entrar com notas</p>
+    </div>
+    <div id="res">
+        <p>Clique no botão acima para informar as notas do aluno.</p>
+    </div>
+    <script>
+        function verificar() {
+            let nomealuno = window.prompt("Qual o nome do aluno?")
+            let primeiranota = window.prompt(`Primeira nota de ${nomealuno}`)
+            let segundanota = window.prompt(`Segunda nota de ${nomealuno}`)
+            let calmedia =(Number(primeiranota) + Number(segundanota)) / 2 //calculo para a média
+            let res = window.document.getElementById("res")
+            res.innerHTML = `${calmedia}`
+
+            if (calmedia > 6.0) {
+                res.innerHTML = `<h2> Analisando a situação de ${nomealuno} </h2>
+<p> Com as notas ${primeiranota} e ${segundanota}, a <strong> média é ${calmedia} </strong> </p>
+<p> Com média acima de 6.0, o aluno está <strong> APROVADO </strong> </p>`
+            } else if (calmedia > 3.0 && calmedia < 6.0 ) {
+                res.innerHTML = `<h2> Analisando a situação de ${nomealuno} </h2>
+<p> Com as notas ${primeiranota} e ${segundanota}, a <strong> média é ${calmedia} </strong> </p>
+<p> Com média entre 3.0 e 6.0, o aluno está de<strong> RECUPERAÇÃO </strong> </p>`
+            }
+             else {
+                res.innerHTML = `<h2> Analisando a situação de ${nomealuno} </h2>
+<p> Com as notas ${primeiranota} e ${segundanota}, a <strong> média é ${calmedia} </strong> </p>
+<p> Com média abaixo de 3.0, o aluno está <strong> REPROVADO </strong> </p>`
+            }
+        } //condições
+    </script>
+</body>
+</html>
